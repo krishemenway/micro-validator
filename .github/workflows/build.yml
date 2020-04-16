@@ -18,7 +18,7 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: MicroValidator
-        path: ./MicroValidator/packed
+        path: ./packed
     - name: Publish to Nuget
       run: dotnet nuget push **/*.symbols.nupkg
         --api-key ${{ secrets.NugetKey }}
